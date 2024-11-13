@@ -18,5 +18,5 @@ jobs:
           echo "HOBBIE=Correr" >> $GITHUB_ENV
 
       - name: Print Environment Variable
-        run: echo Hello, $NAME, $HOBBIE!
+        run: echo Hello,mi nombre es $NAME y me gusta $HOBBIE!
 # This is a basic workflow to help you get started with Actions
