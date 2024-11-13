@@ -1,0 +1,22 @@
+name: CamiloTest
+on:
+
+  push:
+    paths:
+      - file.txt
+
+jobs:
+  print-environment-variable:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set Environment Variable
+        run: |
+          echo "NAME=Camilo Garcia" >> $GITHUB_ENV
+          echo "HOBBIE=Correr" >> $GITHUB_ENV
+
+      - name: Print Environment Variable
+        run: echo Hello, $NAME, $HOBBIE!
+# This is a basic workflow to help you get started with Actions
